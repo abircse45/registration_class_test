@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 
+import 'login_screen.dart';
+
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
 
@@ -162,7 +164,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             fontSize: 16.0
         );
         print("Response___${response.body}");
-        Navigator.push(context, MaterialPageRoute(builder: (_)=> HomeScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (_)=> LoginScreen()));
       });
     }
     else if(response.statusCode==400){
